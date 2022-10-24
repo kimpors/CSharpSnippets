@@ -1,0 +1,130 @@
+{
+	"while loop": {
+		"prefix": "while",
+		"body": [
+			"while(${1:true})",
+			"{",
+			"\t$0",
+			"}"
+		]
+	},
+	"do while loop": {
+		"prefix": "do",
+		"body": [
+			"do",
+			"{",
+			"\t$0",
+			"}while(${1:true});"
+		]
+	},
+	"for loop": {
+		"prefix": "for",
+		"body": [
+			"for (int ${1:i} = 0; ${1:i} < ${2:length}; ${1:i}++)",
+			"{",
+			"\t$0",
+			"}"
+		],
+	},
+	"2 dimension for": {
+		"prefix": "2for",
+		"body": [
+			"for(int ${1:i} = 0; ${1:i} < ${2:length}; ${1:i}++)",
+			"{",
+			"\tfor(int ${4:j} = 0; ${4:j} < ${5:length}; ${4:j}++)",
+			"\t{",
+			"\t\t$0",
+			"\t}",
+			"}"
+		],
+		"description": "'for' for two dimension array"
+	},
+	"foreach loop": {
+		"prefix": "foreach",
+		"body": [
+			"foreach(var ${1:item} in ${2:collection})",
+			"{",
+			"\t$0",
+			"}"
+		]
+	},
+	"namespace": {
+		"prefix": "namespace",
+		"body": [
+			"namespace ${1:name}",
+			"{",
+			"\t$0",
+			"}"
+		]
+	},
+	"interface": {
+		"prefix": "interface",
+		"body": [
+			"${1:public} interface I${2:name}",
+			"{",
+			"\t$0",
+			"}"
+		]
+	},
+	"class": {
+		"prefix": "class",
+		"body": [
+			"${1:public} class ${2:name}",
+			"{",
+			"\t$0",
+			"}"
+		]
+	},
+	"struct": {
+		"prefix": "struct",
+		"body": [
+			"${1:public} struct ${2:name}",
+			"{",
+			"\t$0",
+			"}"
+		]
+	},
+	"constructor": {
+		"prefix": "ctor",
+		"body": [
+			"${1:public} ${2:name}(${3:})",
+			"{",
+			"\t$0",
+			"}"
+		],
+	},
+	"property": {
+		"prefix": "property",
+		"body": [
+			"public ${1:int} ${2:name} {${3:get; set;}}",
+			"$0"
+		]
+	},
+	"method": {
+		"prefix": "method",
+		"body": [
+			"${1:public} ${2:void} ${3:name}(${4:args})",
+			"{",
+			"\t$0",
+			"}"
+		]
+	},
+	"console writeline": {
+		"prefix": "cwl",
+		"body": [
+			"Console.WriteLine(${1:});$0"
+		]
+	},
+	"console write": {
+		"prefix": "cw",
+		"body": [
+			"Console.Write(${1:});$0"
+		]
+	},
+	"print line": {
+		"prefix": "line",
+		"body": [
+			"Console.WriteLine(new string('${1:-}',${2:50}));$0"
+		],
+	}
+}
